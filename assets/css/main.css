@@ -1,0 +1,756 @@
+/* Table of Contents
+----------------------------------
+
+0- Global CSS
+1- Heading CSS
+2- Button CSS
+3- Header Area CSS
+4- Home Area CSS
+5- About Area CSS
+6- Qualification Area CSS 
+7- Services Area CSS
+8- Portfolio Area CSS
+9- Testimonials Area CSS
+10- Blog Area CSS
+11- Contact Area CSS
+12- Footer Area CSS
+13- Scroll-Top Area CSS
+
+*/
+
+
+/*--------------------- 0- Global CSS (Start) ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    --purple: #BC8CF2;
+    --black: #000000;
+    --white: #F7F5F2;
+    --grey: #DFDFDE;
+}
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-optical-sizing: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    -webkit-transition: all 0.2s linear;
+       -moz-transition: all 0.2s linear;
+         -o-transition: all 0.2s linear;
+  	        transition: all 0.2s linear;
+}
+
+*::selection{
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: url(../images/fondo.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+section{
+    padding: 5rem 5%;
+}
+
+::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 1rem;
+    background-color: var(--purple);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--black);
+}
+
+.swiper-pagination-bullet{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50rem;
+    background-color: var(--grey);
+}
+
+.swiper-pagination-bullet-active{
+    width: 3rem;
+    background: var(--purple);
+}
+
+/*--------------------- 0- Global CSS (End) ---------------------*/
+
+
+
+/*--------------------- 1- Heading CSS (Start) ---------------------*/
+.heading{
+    margin-bottom: 2rem;
+}
+
+.heading h2{
+    padding-bottom: 2rem;
+    color:var(--white);
+    font-size: 5rem;
+}
+
+.heading h2 span,
+.subheading h3 span{
+    position: relative;
+    z-index: 0;
+    color: var(--white);
+}
+
+.heading h2 span::before,
+.subheading h3 span::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem; left: 0;
+    z-index: -1;
+    background: var(--purple);
+    height: 0.2rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.subheading{
+    margin-bottom: 2rem;
+}
+
+.subheading h3{
+    color: var(--white);
+    font-size: 3rem;
+}
+
+/*--------------------- 1- Heading CSS (End) ---------------------*/
+
+
+
+/*--------------------- 2- Button CSS (Start) ---------------------*/
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    color: var(--purple);
+    background-color: transparent;
+    border: 0.2rem solid var(--purple);
+}
+
+.btn-code{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.btn-skills{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: rgb(54, 54, 54);
+    border-radius: 1rem;
+    border: 2px solid rgb(131, 131, 131);
+}
+
+.btn-skills img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.btn i{
+    padding-right: 1rem;
+}
+
+.btn:hover{
+    color: var(--white);
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+.btn-code:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+/*--------------------- 2- Button CSS (End) ---------------------*/
+
+
+
+/*--------------------- 3- Header Area CSS (Start) ---------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: transparent;
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    z-index: 999;
+}
+
+/*header.sticky{
+    border-bottom: 0.1rem solid var(--grey);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/*header .logo h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}*/
+
+header .navbar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+header .navbar a{
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 13px;
+}
+
+header .navbar a:hover,
+header .navbar a.active{
+    color: var(--purple);
+}
+
+header #menu-btn{
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    display: none;
+}
+
+header .fa-times{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+header #menu-btn:hover{
+    color: var(--purple);
+}
+
+/*--------------------- 3- Header Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 4- Home Area CSS (Start) ---------------------*/
+.home{
+    margin-top: 20rem;
+    padding: 0rem 5%;
+    /*background-color: var(--black);
+    min-height: 100vh;*/
+}
+
+.home .box-container{
+    /*min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;*/
+}
+
+.home .image{
+    /*text-align: center;*/
+    -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+
+}
+
+.home .image img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70% ;
+    object-fit: cover;
+}
+
+.home .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--white);
+    margin: 2rem 0;
+    text-transform: none;
+}
+
+.home .content p span{
+    color: var(--purple);
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.5;
+    display: inline;
+}
+
+.home .content span{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.home .content .extra{
+    display: none;
+}
+
+input[type="checkbox"]{
+    display: inline;
+    appearance: none;
+}
+
+label {
+    display: inline;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+label::before{
+    content: 'Leer más';
+    font-size: 2rem;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+    content: 'Leer menos';
+}
+
+.emoji:has(~ input[type="checkbox"]:checked){
+    display: none;
+}
+
+.extra:has(~ input[type="checkbox"]:checked){
+    display: inline;
+}
+
+.home .content a{
+    display: block;
+    width: 198.33px;
+    margin-top: 3rem;
+}
+/*--------------------- 4- Home Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
+.qualification .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.education, .experience{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+}
+
+.experience-item{
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    padding: 0 3rem 2rem 3rem;
+    border-left: 0.2rem solid var(--purple);
+    margin-left: 2rem;
+}
+
+.experience-item .fas{
+    position: absolute;
+    top: 0; 
+    left: -2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:var(--white);
+    background:var(--purple);
+}
+
+.experience-item .content{
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-left: 2rem;
+}
+
+.experience-item span{
+    background: #222;
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 50rem;
+}
+
+.experience-item h3{
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.experience-item p{
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.experience-item a{
+    margin-top: 3rem;
+}
+
+/*--------------------- 6- Qualification Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
+
+.portfolio .box-container{
+    display: -ms-grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.portfolio-item{
+    border-radius: 1.5rem;
+    height: 40rem;
+    width: 70rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-item .content{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+
+.portfolio-item .content h4{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--purple);
+    transform-origin: top;
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    opacity: 0;
+    padding-bottom: 1rem;
+    -webkit-transition: all 0.4s linear;
+       -moz-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+}
+
+.portfolio-item .content p{
+    width: 80%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white);
+    transform-origin: top;
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+       -moz-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+    margin: 1.5rem 0;
+}
+
+.portfolio .box-container .tags{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--white);
+    width: 70rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.portfolio .box-container .tags span{
+    border-radius: 2rem;
+    padding: 4px 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio .box-container .tags span img{
+    width: 2.5rem;
+    padding-right: 0.5rem;
+}
+
+.bootstrap-tag {
+    background-color: rgba(183, 0, 255, 0.3);
+}
+
+.php-tag {
+    background-color: rgba(255, 0, 212, 0.3);
+}
+
+.javascript-tag {
+    background-color: rgb(255, 255, 0, 0.3);
+}
+
+.mysql-tag {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--black);
+}
+
+.react-tag {
+    background-color: rgba(0, 110, 255, 0.3);
+}
+
+.node-tag {
+    background-color: rgba(51, 255, 0, 0.3);
+}
+
+.mongodb-tag {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--black);
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.more-projects p{
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.more-projects .arrow{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.portfolio-item:hover .content{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+.portfolio-item:hover .content h4{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover .content p{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover .content .view-btn{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover img{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+
+/*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 7- Skills Area CSS (Start) ---------------------*/
+.skills .box-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+
+/*--------------------- 7- Skills Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 11- Contact Area CSS (Start) ---------------------*/
+.contact .box-container .email{
+    display: grid;
+    grid-template-columns: 1fr 80px 80px;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact .box-container .email button,
+.contact .box-container .tlf button{
+    font-size: 2rem;
+    padding: 0 3rem;
+    border-radius: 1rem;
+    background: var(--purple);
+    height: 42px;
+}
+
+.contact .box-container .email button:hover,
+.contact .box-container .tlf button:hover{
+    background: #8765ad;
+    cursor: pointer;
+}
+
+.contact .box-container .tlf{
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/*--------------------- 11- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 13- Scroll-Top (Start) ---------------------*/
+.scroll-top{
+    position: fixed;
+    bottom: 1rem;
+    right:1rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight:lighter;
+    background: var(--black);
+    color: var(--white);
+    border: 0.2rem solid var(--white);
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .scroll-top:hover{
+    background: var(--white);
+    color:var(--black);
+  }
+
+/*--------------------- 13- Scroll-Top (End) ---------------------*/
+
+
+
+/*--------------------- 14- Social Area CSS (Start) ---------------------*/
+
+.redes .box-container a:first-child{
+    margin-right: 20px;
+}
+
+/*--------------------- 14- Social Area CSS (End) ---------------------*/
